@@ -32,12 +32,12 @@
       const list = document.querySelector("ul");
       // return if task is empty
       if (task.value === "") {
-        alert("Please add some task!");
+        alert("Please add some wish!");
         return false;
       }
       // check is task already exist
       if (document.querySelector(`input[value="${task.value}"]`)) {
-        alert("Task already exist!");
+        alert("Wish already exist!");
         return false;
       }
 
@@ -90,14 +90,14 @@
       let tasks = Array.from(JSON.parse(localStorage.getItem("tasks")));
       // check if task is empty
       if (event.value === "") {
-        alert("Task is empty!");
+        alert("Wish is empty!");
         event.value = currentTask;
         return;
       }
       // task already exist
       tasks.forEach(task => {
         if (task.task === event.value) {
-          alert("Task already exist!");
+          alert("Wish already exist!");
           event.value = currentTask;
           return;
         }
